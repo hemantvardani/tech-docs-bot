@@ -17,25 +17,32 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-              AI TechDoc
-            </Link>
+          <div className="flex justify-between items-center">
+            <div className="flex-shrink-0">
+              <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+                AI TechDoc
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-8">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-gray-50"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 hover:bg-gray-50"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+
+          <div className="flex">
+            <button className="">Sign In</button>
           </div>
 
           {/* Mobile menu button */}
@@ -50,6 +57,7 @@ export function Navbar() {
               </svg>
             </button>
           </div>
+          
         </div>
 
         {/* Mobile Navigation - You can add state management here later */}

@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "dev:website": "cd apps/website-inner && npm run dev",
+        "dev:widget": "cd apps/widget-inner && npm run dev",
+        "dev:ai-logic": "cd app/ai-logic && source venv/bin/activate && uvicorn main:app --reload --port 8000 ",
+        "dev:all": "concurrently \"npm run dev:website\" \"npm run dev:widget\" \"npm run dev:ai-logic\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
