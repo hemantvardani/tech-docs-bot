@@ -48,3 +48,6 @@
 # IDE / editor
 .vscode/
 .idea/
+
+**/process-scrapped-content/input
+**/process-scrapped-content/output

@@ -21,7 +21,7 @@ export function Navbar() {
           <div className="flex justify-between items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
-                AI TechDoc
+                {process.env.APPLICATION_NAME}
               </Link>
             </div>
 

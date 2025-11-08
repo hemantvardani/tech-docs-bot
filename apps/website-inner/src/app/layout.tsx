@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI TechDoc - AI-Powered Technical Documentation Chat",
+  title: process.env.APPLICATION_NAME +" - AI-Powered Technical Documentation Chat",
   description: "Transform your technical documentation into an intelligent chatbot. Get instant answers and improve your documentation experience with AI.",
 };
 

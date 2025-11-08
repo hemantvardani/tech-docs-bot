@@ -23,17 +23,16 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Your Customers Can't Find{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-orange-600">
-                Simple Answers
-              </span>{' '}
-              In Your Docs
+              An   {' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-[#A020F0]">
+                Intelligent Developer Copilot
+              </span>{' '}  
+              for Your Technical Docs
             </h1>
 
             {/* Subheading */}
             <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
-              Every day your prospects struggle with complex documentation, your sales cycle gets longer. 
-              Turn your technical docs into an AI assistant that gives instant, perfect answers.
+              An AI assistant that answers developers' technical questions, guides integrations, and helps your customers get live faster.
             </p>
 
             {/* Business Impact Benefits */}
@@ -48,7 +47,7 @@ export default function HeroSection() {
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Reduce support tickets by 80%
+                Reduce technical tickets by 80%
               </div>
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,17 +60,17 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
-                Start Free Trial
-                <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                Want Free Trial ?
+                {/* <svg className="w-5 h-5 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                </svg>
+                </svg> */}
               </button>
               
               <button className="bg-white hover:bg-gray-50 text-gray-800 font-semibold px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-gray-300 transition-all duration-200">
-                <svg className="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h8m-9-4h10a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8a2 2 0 012-2z"></path>
-                </svg>
-                Watch Demo
+                </svg> */}
+                Watch Demo 
               </button>
             </div>
 
@@ -122,12 +121,12 @@ export default function HeroSection() {
 
               {/* Arrow */}
               <div className="text-center mb-8">
-                <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold inline-flex items-center">
+                {/* <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold inline-flex items-center">
                   TRANSFORM TO THIS
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                   </svg>
-                </div>
+                </div> */}
               </div>
 
               {/* After - AI Assistant */}
@@ -146,7 +145,7 @@ export default function HeroSection() {
                     <div className="w-3 h-3 bg-yellow-400 rounded-full mr-2"></div>
                     <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                   </div>
-                  <div className="text-xs text-gray-600 font-mono">AI TechDoc Assistant</div>
+                  <div className="text-xs text-gray-600 font-mono">{`${process.env.APPLICATION_NAME} Assistant`}</div>
                 </div>
 
                 {/* Chat messages */}
@@ -186,7 +185,7 @@ export default function HeroSection() {
               {/* <div className="absolute -top-4 -right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold animate-bounce">
                 Accurate
               </div> */}
-              <div className="absolute -bottom-10 -left-4 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold animate-pulse">
+              <div className="absolute -bottom-10 -left-4 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">
                 ⚡ Instant Response
               </div>
             </div>
