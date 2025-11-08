@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Script from "next/script";
+import Provider from "./provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,27 +30,28 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        {/* ✅ Chatbot Script */}
+        <Provider> 
+          <Navbar />
+          {children}
 
-        <Script
-          id="chatbot-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const s = document.createElement('script');
-                s.src = "http://localhost:3000/widget.js"; // your chatbot script URL
-                s.onload = () => {
-                 window.MyChatWidget.default.init({ apiUrl: 'http://localhost:8000/chat' });
-                };
-                s.async = true;
-                document.body.appendChild(s);
-              })();
-            `
-          }}
-        />
+          <Script
+            id="chatbot-script"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  const s = document.createElement('script');
+                  s.src = "http://localhost:3000/widget.js"; // your chatbot script URL
+                  s.onload = () => {
+                  window.MyChatWidget.default.init({ apiUrl: 'http://localhost:8000/chat' });
+                  };
+                  s.async = true;
+                  document.body.appendChild(s);
+                })();
+              `
+            }}
+          />
+        </Provider>
       </body>
     </html>
   );

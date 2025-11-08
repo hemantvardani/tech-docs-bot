@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AuthButton from './auth/AuthButton';
 
 interface NavItem {
   href: string;
@@ -42,7 +43,7 @@ export function Navbar() {
 
 
           <div className="flex">
-            <button className="">Sign In</button>
+            <AuthButton/>
           </div>
 
           {/* Mobile menu button */}
